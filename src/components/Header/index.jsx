@@ -3,14 +3,15 @@ import Logo from "../../assets/img/logo-store.png";
 import { TiShoppingCart } from "react-icons/ti";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 export const Header = () => {
   return (
     <header className="header">
-      <div className="container">
+      <div className="header-container">
         <div className="header-inner">
           <div className="header-box">
-            <a href="#" className="header-logo-link">
+            <NavLink to="/" className="header-logo-link">
               <img
                 src={Logo}
                 alt="logo"
@@ -18,29 +19,29 @@ export const Header = () => {
                 width={200}
                 height={40}
               />
-            </a>
+            </NavLink>
 
             <nav className="header-nav">
               <ul className="header-list">
                 <li className="header-item">
-                  <a href="#" className="header-item-link">
+                  <NavLink to='' className="header-item-link">
                     Home
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="header-item">
-                  <a href="#" className="header-item-link">
+                  <NavLink to='/men' className="header-item-link">
                     Men
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="header-item">
-                  <a href="#" className="header-item-link">
+                  <NavLink to='/women' className="header-item-link">
                     Women
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="header-item">
-                  <a href="#" className="header-item-link">
+                  <NavLink to='/kids' className="header-item-link">
                     Kids
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </nav>
@@ -48,22 +49,22 @@ export const Header = () => {
 
           <ul className="headerend-list">
             <li className="header-end-item">
-              <a href="#" className="header-end-link">
+              <NavLink to='' className="header-end-link">
                 <FaRegUser />
                 Login
-              </a>
+              </NavLink>
             </li>
             <li className="header-end-item">
-              <a href="#" className="header-end-link">
+              <NavLink to='' className="header-end-link">
                 <FaRegHeart />
                 Saved
-              </a>
+              </NavLink>
             </li>
             <li className="header-end-item">
-              <a href="#" className="header-end-link">
+              <NavLink to='' className="header-end-link">
                 <TiShoppingCart />
                 Shopping
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

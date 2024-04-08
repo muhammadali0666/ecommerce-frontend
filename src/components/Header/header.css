@@ -1,6 +1,3 @@
-.header {
-  box-shadow: 0px 0px 10px 5px #f5f3f3;
-}
 .header-inner {
   padding: 20px 0;
   display: flex;
@@ -18,8 +15,11 @@
   margin-left: 60px;
 }
 .header-item-link {
-  /* font-weight: 400; */
   font-size: 18px;
+  transition: all 0.5s linear;
+}
+.header-item-link.active {
+  border-bottom: 2px solid #1b1b1b;
 }
 .headerend-list {
   display: flex;
