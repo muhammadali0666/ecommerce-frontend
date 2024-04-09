@@ -4,6 +4,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   color: #1b1b1b;
+  transition: all .25s;
 }
 ul, ol {
   list-style-type: none;
