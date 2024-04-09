@@ -3,7 +3,7 @@
   margin-top: 80px;
 }
 .hero-inner {
-  padding: 100px 0;
+  padding: 40px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,8 +12,8 @@
   max-width: 600px;
 }
 .hero-title {
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 50px;
+  line-height: 50px;
   margin-bottom: 30px;
   color: rgb(255, 212, 7);
 }

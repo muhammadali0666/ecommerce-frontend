@@ -41,7 +41,7 @@ export const Footer = () => {
             </div>
             <div className="footer-box">
               <p className="footer-text">
-                Bizning ijtimoiy tarmoqlarni kuzating!
+              Follow our social networks!
               </p>
               <ul className="footer-box-list">
                 <li className="footer-box-item">
@@ -73,7 +73,7 @@ export const Footer = () => {
           </div>
           <hr className="footer-hr" />
           <p className="footer-bottom-text">
-            {new Date().getFullYear()} Barcha huquqlar himoyalangan
+            {new Date().getFullYear()} all rights reserved
           </p>
         </div>
       </div>
