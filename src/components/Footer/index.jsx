@@ -1,7 +1,82 @@
-import "./footer.css"
+import Telegram from "../../assets/img/telegram.png"
+import Instagram from "../../assets/img/instagram.png"
+import Youtube from "../../assets/img/youtube.png"
+import Facebook from "../../assets/img/facebook.png"
+import "./footer.css";
+
 
 export const Footer = () => {
   return (
-    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam consequatur eius quibusdam sunt architecto vero iure aliquam fuga eos delectus, doloribus quae, dolorem dicta excepturi porro? Illum architecto quisquam earum hic itaque ducimus magni, impedit ipsum, repellat cupiditate numquam excepturi repellendus veniam quidem ipsa labore sint odio corporis sit eaque, eveniet nobis. Dolor quae impedit rerum recusandae fugiat blanditiis corrupti id incidunt odit iusto quam est odio repellendus magni repudiandae ut ipsa, consequatur assumenda unde consectetur, earum non nesciunt. Cupiditate assumenda deserunt id ratione voluptate expedita deleniti soluta? Fugit, exercitationem. Eligendi sit molestias dignissimos veritatis accusamus debitis quam iure error, sunt distinctio minus? Tenetur ea nesciunt maxime eaque dolores quia nobis esse odio cum rem quis eos ipsum incidunt beatae neque est veniam, unde quas, ratione molestias! Expedita esse porro quis, eaque hic omnis magni iste consequuntur quibusdam quae officia reiciendis incidunt perferendis ut aut autem harum eligendi sint eveniet distinctio cupiditate? Vero, incidunt. Suscipit voluptas quod tempora minima iusto repellendus fugiat, tenetur, rerum sed nulla quam perferendis dolor maiores enim possimus impedit ab deleniti! Ipsa reiciendis sint possimus alias nisi provident nam mollitia ad exercitationem, repellendus quaerat tempore explicabo neque obcaecati sapiente officia autem dolorem consectetur, expedita amet pariatur? Eum quidem ipsam eaque provident iste debitis ad quas dicta commodi ratione exercitationem facere, consequatur fugit veniam sint at nostrum, explicabo nesciunt quae quis assumenda ducimus, in porro quo. Architecto deserunt totam nulla neque. Aperiam nihil temporibus repellat quidem, incidunt iusto voluptatem numquam neque non dicta enim deserunt, suscipit itaque illo ipsa. Odio labore tempore veniam aperiam expedita vero incidunt pariatur ea beatae nisi. In, repellat quisquam doloribus numquam quam ad esse. Ipsa doloremque hic recusandae, distinctio rem magnam dignissimos suscipit, nihil exercitationem harum ullam quod, perspiciatis nulla maiores veniam quo labore temporibus adipisci debitis commodi quae ea. Rem quasi repellat, expedita debitis eligendi quaerat fuga voluptatem sapiente enim molestias modi blanditiis. Ipsam, aliquid mollitia eligendi perferendis dolorem autem explicabo nihil tenetur pariatur voluptatibus recusandae adipisci quibusdam, quos aperiam iure magni est magnam corrupti, harum provident. Blanditiis sequi laboriosam praesentium a quibusdam voluptate accusamus rerum dolores eius perspiciatis aut ullam fuga ab earum quaerat eligendi unde deleniti ex, totam eaque. Magnam placeat, autem ut similique, eos neque illo porro sint illum non dolorem dicta ducimus, maxime commodi vel veniam repellendus excepturi temporibus tempore culpa nesciunt perferendis harum vitae beatae? Ipsa quidem enim rerum cum, a id tempore odio cumque doloribus. Illo, obcaecati maiores libero aut sunt doloremque sit? Consequatur, voluptate temporibus doloribus culpa perferendis est incidunt veniam architecto molestias sit iure magni id, repellat quae minima excepturi fugiat eius dolorum numquam expedita mollitia. Ipsa magni nisi itaque aperiam nostrum, id voluptas quaerat consequatur eius sint quisquam facilis officiis aliquid atque aliquam beatae repellendus quae similique. Ut harum sunt repudiandae repellendus. Ab est veniam dolorum officiis doloribus harum sequi laboriosam debitis rem, corrupti ad reprehenderit at? Omnis, beatae mollitia. Quae eaque dolores quia exercitationem minus dignissimos eos asperiores enim sint. Rem tempora nobis sapiente iste nostrum aspernatur veritatis, facilis ipsa praesentium illum. Cumque, recusandae. Reprehenderit unde doloribus nihil deleniti itaque velit commodi expedita, veniam veritatis sunt, praesentium pariatur! Animi, aut. Harum reprehenderit illo necessitatibus eveniet blanditiis quo adipisci maxime quidem aut dicta quas cupiditate facere nulla ad assumenda incidunt obcaecati, dolore officiis dolor saepe ab autem. Magni eius autem recusandae, fuga ducimus quia voluptas ipsum vitae consequatur amet facere impedit eos deleniti harum aperiam aliquam pariatur facilis nihil fugit beatae excepturi officiis! Quisquam deserunt ex exercitationem illo magnam aut quaerat, expedita recusandae ratione eligendi ut perspiciatis minus voluptatibus nesciunt, soluta numquam debitis autem porro excepturi vitae at! Ipsum temporibus voluptate velit, consequuntur, est deserunt unde pariatur sunt quas quia sequi laborum aliquid neque fuga reiciendis iusto repellat veritatis tempora! Aliquid a amet aliquam soluta culpa blanditiis doloribus deleniti, odio, at iste voluptates tempora repudiandae deserunt tenetur alias ad quisquam ducimus repellat neque sunt asperiores. Earum, aspernatur? Neque ipsam nobis distinctio aspernatur consectetur suscipit error modi voluptatem optio. Eligendi et tempora quidem debitis odit ea quos ex facere veritatis itaque? Tenetur quo consectetur nam nisi possimus repellat laborum, molestias ratione! Deleniti voluptatem minima, quos aperiam eos quo, enim ad aut, blanditiis corrupti porro iusto? Quasi laudantium nisi, at facere illo, eius tempore blanditiis nesciunt aliquam doloremque ex. Commodi, consectetur cupiditate, maxime consequatur, dolorum velit sequi optio similique laudantium illum illo! A nemo quis alias ut dicta nulla aut quasi. Porro dolore a nulla sed mollitia explicabo dignissimos repudiandae illum repellat deserunt? Illum modi a ducimus provident iure sit doloremque, reprehenderit fugiat saepe rerum amet eaque ex dolore, facere, id eum. Consequuntur, doloribus! Iure dolorem, odit laboriosam eligendi quidem ea vero dolor fuga suscipit earum sint ducimus saepe tempore numquam fugiat quo? Quae natus maiores aut, esse nemo recusandae nesciunt quisquam ullam quis est, fugiat veritatis sunt doloremque dolore ea excepturi. Velit nam tenetur maiores inventore similique harum repellat, suscipit quos aperiam pariatur, doloribus sed temporibus illum dolores? Ab libero laudantium necessitatibus quam veniam provident ullam assumenda similique aut eius nisi soluta expedita asperiores, amet iste, sapiente magni eligendi debitis maxime vero. Iste non quas voluptatem corrupti. Cupiditate quia laborum accusantium esse debitis eaque rem distinctio fuga, recusandae dolore quod laudantium molestiae id iste atque voluptas corrupti excepturi, voluptates expedita voluptatem aliquam corporis unde eius. Quas, veniam soluta ex ipsa error ut ipsum at laudantium iste eaque saepe omnis vel doloremque voluptates optio facilis alias, rerum provident. Dolores debitis aspernatur aliquid ducimus tempore, maxime, dicta ex iure impedit totam veritatis itaque voluptatum odit libero deleniti corporis nemo vitae ab molestiae illo accusamus possimus, vel assumenda iste. Ullam quas sint laudantium mollitia temporibus odio ratione soluta repudiandae nemo itaque dolor tenetur, optio atque tempore fugit vel aspernatur at esse quisquam consectetur commodi delectus voluptates? Magnam in, magni, sed officia esse temporibus, quia aliquam qui autem tempora assumenda numquam! Explicabo minima, qui asperiores libero minus ut corrupti sit nulla? Necessitatibus quaerat, tempora cumque, consequuntur sed libero perferendis, voluptatum laboriosam doloremque distinctio a illum soluta porro amet minima laudantium possimus quidem odio. Hic ullam quod cumque?</div>
-  )
-}
+    <footer className="footer">
+      <div className="container">
+        <div className="footer-inner">
+          <div className="footer-top">
+            <div className="footer-one-box">
+              <ul className="footer-list">
+                <h4 className="footer-list-title">Main list</h4>
+                <li className="footer-item">
+                  <a href="#" className="footer-item-link">
+                    Home
+                  </a>
+                </li>
+                <li className="footer-item">
+                  <a href="#" className="footer-item-link">
+                    Men
+                  </a>
+                </li>
+              </ul>
+              <ul className="footer-list">
+                <h4 className="footer-list-title">Next list</h4>
+                <li className="footer-item">
+                  <a href="#" className="footer-item-link">
+                    Women
+                  </a>
+                </li>
+                <li className="footer-item">
+                  <a href="#" className="footer-item-link">
+                    Kids
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="footer-box">
+              <p className="footer-text">
+                Bizning ijtimoiy tarmoqlarni kuzating!
+              </p>
+              <ul className="footer-box-list">
+                <li className="footer-box-item">
+                  <a href="#" className="footer-box-item-link">
+                    <img src={Instagram} width={20} height={20} alt="social media icon" className="footer-icon"/>
+                    Instagram
+                  </a>
+                </li>
+                <li className="footer-box-item">
+                  <a href="#" className="footer-box-item-link">
+                    <img src={Youtube} width={20} height={20} alt="social media icon" className="footer-icon"/>
+                    Youtube
+                  </a>
+                </li>
+                <li className="footer-box-item">
+                  <a href="#" className="footer-box-item-link">
+                    <img src={Facebook} width={20} height={20} alt="social media icon" className="footer-icon"/>
+                    Facebook
+                  </a>
+                </li>
+                <li className="footer-box-item">
+                  <a href="#" className="footer-box-item-link">
+                    <img src={Telegram} width={20} height={20} alt="social media icon" className="footer-icon"/>
+                    Telegram
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr className="footer-hr" />
+          <p className="footer-bottom-text">
+            {new Date().getFullYear()} Barcha huquqlar himoyalangan
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
