@@ -1,10 +1,11 @@
 import { Home } from "./pages/Home"
+import { RouteWrapper } from "./router"
 
 function App() {
   
   return (
     <>
-     <Home/>
+     <RouteWrapper/>
     </>
   )
 }

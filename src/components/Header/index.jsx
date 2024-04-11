@@ -49,19 +49,19 @@ export const Header = () => {
 
           <ul className="headerend-list">
             <li className="header-end-item">
-              <NavLink to='' className="header-end-link">
+              <NavLink to='/login' className="header-end-link">
                 <FaRegUser />
                 Login
               </NavLink>
             </li>
             <li className="header-end-item">
-              <NavLink to='' className="header-end-link">
+              <NavLink className="header-end-link">
                 <FaRegHeart />
                 Saved
               </NavLink>
             </li>
             <li className="header-end-item">
-              <NavLink to='' className="header-end-link">
+              <NavLink  className="header-end-link">
                 <TiShoppingCart />
                 Shopping
               </NavLink>
