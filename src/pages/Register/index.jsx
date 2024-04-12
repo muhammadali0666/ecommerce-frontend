@@ -11,12 +11,22 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+const defaultTheme = createTheme();
 
-export default function SignIn() {
+export default function SignUp() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get('email'),
+      password: data.get('password'),
+    });
+  };
 
   return (
+    <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -31,10 +41,21 @@ export default function SignIn() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign In
+            Sign up
           </Typography>
-          <Box component="form" noValidate sx={{ mt: 3 }}>
+          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  autoComplete="given-name"
+                  name="firstName"
+                  required
+                  fullWidth
+                  id="firstName"
+                  label="First Name"
+                  autoFocus
+                />
+              </Grid>
               <Grid item xs={12}>
                 <TextField
                   required
@@ -69,17 +90,18 @@ export default function SignIn() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign In
+              Sign Up
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="/register" variant="body2">
-                  If you haven't account? Sign Up
+                <Link href="/login" variant="body2">
+                  Already have an account? Sign in
                 </Link>
               </Grid>
             </Grid>
           </Box>
         </Box>
       </Container>
+    </ThemeProvider>
   );
 }
