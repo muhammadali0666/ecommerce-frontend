@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import { Layouts } from "../../components/Layouts";
 
 export const Kids = () => {
   return (
-    <div>Kids</div>
-  )
-}
+    <Layouts>
+      <h1>Kids</h1>
+    </Layouts>
+  );
+};

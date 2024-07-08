@@ -3,6 +3,7 @@ import Instagram from "../../assets/img/instagram.png"
 import Youtube from "../../assets/img/youtube.png"
 import Facebook from "../../assets/img/facebook.png"
 import "./footer.css";
+import { NavLink } from "react-router-dom";
 
 
 export const Footer = () => {
@@ -15,27 +16,27 @@ export const Footer = () => {
               <ul className="footer-list">
                 <h4 className="footer-list-title">Main list</h4>
                 <li className="footer-item">
-                  <a href="#" className="footer-item-link">
+                  <NavLink to={"/"} className="footer-item-link">
                     Home
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="footer-item">
-                  <a href="#" className="footer-item-link">
+                  <NavLink to={"/men"} className="footer-item-link">
                     Men
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
               <ul className="footer-list">
                 <h4 className="footer-list-title">Next list</h4>
                 <li className="footer-item">
-                  <a href="#" className="footer-item-link">
+                  <NavLink to={"/women"} className="footer-item-link">
                     Women
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="footer-item">
-                  <a href="#" className="footer-item-link">
+                  <NavLink to={"/kids"} className="footer-item-link">
                     Kids
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>

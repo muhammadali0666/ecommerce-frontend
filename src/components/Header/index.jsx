@@ -24,7 +24,7 @@ export const Header = () => {
             <nav className="header-nav">
               <ul className="header-list">
                 <li className="header-item">
-                  <NavLink to='' className="header-item-link">
+                  <NavLink to='/' className="header-item-link">
                     Home
                   </NavLink>
                 </li>
