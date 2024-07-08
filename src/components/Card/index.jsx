@@ -1,13 +1,12 @@
+import { Container } from "../StyledComponents";
 import "./card.css";
 import { TbShoppingBagPlus } from "react-icons/tb";
 
 export const Card = () => {
   return (
     <section className="card">
-      <div className="container">
+      <Container>
         <div className="card-inner">
-          <h2 className="card-title">Products</h2>
-
           <ul className="card-list">
             <li className="card-item">
               <img
@@ -464,7 +463,7 @@ export const Card = () => {
           <button className="card-bottom-btn">20 more views</button>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

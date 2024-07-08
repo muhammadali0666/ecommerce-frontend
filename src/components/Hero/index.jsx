@@ -1,11 +1,12 @@
 import "./hero.css"
 import { IoCallOutline } from "react-icons/io5";
 import HeroBg from "../../assets/img/model.avif"
+import { Container } from "../StyledComponents";
 
 export const Hero = () => {
   return (
     <section className="hero">
-      <div className="container">
+      <Container>
         <div className="hero-inner">
           <div className="hero-box">
             <h1 className="hero-title">
@@ -21,7 +22,7 @@ export const Hero = () => {
           </div>
           <img src={HeroBg} alt="bg" className="hero-img" width={500} height={400}/>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

@@ -1,10 +1,6 @@
 .card-inner {
   padding: 50px 0;
 }
-.card-title {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
 .card-list {
   display: flex;
   align-items: center;

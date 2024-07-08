@@ -4,12 +4,13 @@ import Youtube from "../../assets/img/youtube.png"
 import Facebook from "../../assets/img/facebook.png"
 import "./footer.css";
 import { NavLink } from "react-router-dom";
+import { Container } from "../StyledComponents";
 
 
 export const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container">
+      <Container>
         <div className="footer-inner">
           <div className="footer-top">
             <div className="footer-one-box">
@@ -77,7 +78,7 @@ export const Footer = () => {
             {new Date().getFullYear()} all rights reserved
           </p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 };
