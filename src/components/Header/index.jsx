@@ -55,13 +55,13 @@ export const Header = () => {
               </NavLink>
             </li>
             <li className="header-end-item">
-              <NavLink className="header-end-link">
+              <NavLink to={"/saved"} className="header-end-link">
                 <FaRegHeart />
                 Saved
               </NavLink>
             </li>
             <li className="header-end-item">
-              <NavLink  className="header-end-link">
+              <NavLink to={"/shopping"} className="header-end-link">
                 <TiShoppingCart />
                 Shopping
               </NavLink>
