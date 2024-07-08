@@ -8,5 +8,6 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
   font-size: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  color: rgba(60,61,66, 0.8)
 `;
