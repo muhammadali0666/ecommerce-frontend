@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Title } from "../StyledComponents";
 import { LatestProducts } from "../LatestProduct";
 import { MdDelete } from "react-icons/md";
@@ -7,6 +7,16 @@ import { FaMinus } from "react-icons/fa";
 import "./shopping.css";
 
 export const ShoppingComp = () => {
+  const [quantity, setQuantity] = useState(0);
+
+  const quantityIncreement = () => {
+    setQuantity((quant) => quant + 1);
+  };
+
+  const quantityDecreement = () => {
+    setQuantity((quant) => quant - 1);
+  };
+
   return (
     <Container style={{ marginTop: "140px" }}>
       <Title>Our Shopping</Title>
@@ -30,9 +40,21 @@ export const ShoppingComp = () => {
                 Product name...
               </h4>
               <div className="shopping-left-box-middle-btn-box">
-                <button className="shopping-left-box-middle-btn"><FaMinus style={{fontSize: "16px"}}/></button>
-                <button className="shopping-left-box-middle-btn">1</button>
-                <button className="shopping-left-box-middle-btn"><FaPlus style={{fontSize: "16px", color: "red"}}/></button>
+                <button
+                  className="shopping-left-box-middle-btn"
+                  onClick={quantity > 0 ? quantityDecreement : undefined}
+                >
+                  <FaMinus style={{ fontSize: "16px" }} />
+                </button>
+                <button className="shopping-left-box-middle-btn">
+                  {quantity}
+                </button>
+                <button
+                  className="shopping-left-box-middle-btn"
+                  onClick={quantityIncreement}
+                >
+                  <FaPlus style={{ fontSize: "16px", color: "red" }} />
+                </button>
               </div>
             </div>
             <div className="shopping-left-box-right">
