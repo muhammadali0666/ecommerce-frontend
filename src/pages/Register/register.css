@@ -1,0 +1,11 @@
+.show-hide-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.show-hide {
+  font-size: 25px;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+}
