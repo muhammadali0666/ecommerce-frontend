@@ -7,6 +7,7 @@ import { Kids } from "../pages/Kids"
 import { Women } from "../pages/Women"
 import { Shopping } from "../pages/Shopping"
 import { Saved } from "../pages/Saved"
+import { Verify } from "../pages/Verify"
 
 export const RouteWrapper = () => {
   return (
@@ -19,6 +20,7 @@ export const RouteWrapper = () => {
       <Route path="/women" element={<Women/>}/>
       <Route path="/shopping" element={<Shopping/>}/>
       <Route path="/saved" element={<Saved/>}/>
+      <Route path="/verify" element={<Verify/>}/>
     </Routes>
   )
 }

@@ -24,28 +24,42 @@ const notify = (info) => toast.info(info);
 
 export default function SignUp() {
   const [visible, setVisible] = useState(false);
-  const [inputType, setInputType] = useState("password")
+  const [inputType, setInputType] = useState("password");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
     fetch(`http://localhost:4001/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        username: data.get("firstName"),
-        email: data.get("email"),
-        password: data.get("password"),
+        username,
+        email,
+        password,
       }),
     })
       .then((res) => res.json())
-      .then((datas) => notify(datas.message));
+      .then((datas) => {
+        notify(datas.message);
+        if (datas.message === "user already exists") {
+          setTimeout(() => {
+            location.href = "/login";
+          }, 5000);
+        } else if (datas.message === "Registered!") {
+          setTimeout(() => {
+            location.href = "/verify";
+          }, 5000);
+        }
+      });
   };
 
   const handleVisible = () => {
     setVisible((v) => !v);
-    setInputType((i) => i === "password" ? "text" : "password")
+    setInputType((i) => (i === "password" ? "text" : "password"));
   };
 
   return (
@@ -83,6 +97,8 @@ export default function SignUp() {
                   id="firstName"
                   label="First Name"
                   autoFocus
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -93,6 +109,8 @@ export default function SignUp() {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12} className="show-hide-wrapper">
@@ -104,6 +122,8 @@ export default function SignUp() {
                   type={inputType}
                   id="password"
                   autoComplete="new-password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 {visible ? (
                   <BiSolidHide className="show-hide" onClick={handleVisible} />
