@@ -46,10 +46,12 @@ export default function SignUp() {
       .then((datas) => {
         notify(datas.message);
         if (datas.message === "user already exists") {
+          localStorage.setItem("email", email);
           setTimeout(() => {
             location.href = "/login";
           }, 5000);
         } else if (datas.message === "Registered!") {
+          localStorage.setItem("email", email);
           setTimeout(() => {
             location.href = "/verify";
           }, 5000);

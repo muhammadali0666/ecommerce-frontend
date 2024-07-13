@@ -44,6 +44,7 @@ export default function SignIn() {
           }, 5000);
         } else if (datas.message === "Success") {
           localStorage.setItem("token", datas.token)
+          localStorage.setItem("email", email)
           setTimeout(() => {
             location.href = "/";
           }, 5000);

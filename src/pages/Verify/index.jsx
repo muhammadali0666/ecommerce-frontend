@@ -8,17 +8,29 @@ import "react-toastify/dist/ReactToastify.css";
 const notify = (info) => toast.info(info);
 
 export const Verify = () => {
-  let [verifyOne, setVerifyOne] = useState("");
+  const [verifyOne, setVerifyOne] = useState("");
+  const [verifyTwo, setVerifyTwo] = useState("");
+  const [verifyThree, setVerifyThree] = useState("");
+  const [verifyFour, setVerifyFour] = useState("");
+  const [verifyFive, setVerifyFive] = useState("");
+  const [verifySix, setVerifySix] = useState("");
+  let sum = "";
 
   const handleVerify = (event) => {
     event.preventDefault();
+    sum += verifyOne;
+    sum += verifyTwo;
+    sum += verifyThree;
+    sum += verifyFour;
+    sum += verifyFive;
+    sum += verifySix;
     fetch(`http://localhost:4001/verify_code`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        verify: verifyOne,
+        verify: sum.trim(),
         email: localStorage.getItem("email"),
       }),
     })
@@ -46,7 +58,7 @@ export const Verify = () => {
       <p className="verify-text">
         You must enter a verification code. Check your email for the code.
       </p>
-      <HStack className="verify-input-wrapper" onClick={handleVerify}>
+      <HStack className="verify-input-wrapper">
         <PinInput>
           <PinInputField
             className="verify-input"
@@ -55,31 +67,31 @@ export const Verify = () => {
           />
           <PinInputField
             className="verify-input"
-            value={verifyOne}
-            onChange={(e) => setVerifyOne((verifyOne += e.target.value))}
+            value={verifyTwo}
+            onChange={(e) => setVerifyTwo(e.target.value)}
           />
           <PinInputField
             className="verify-input"
-            value={verifyOne}
-            onChange={(e) => setVerifyOne((verifyOne += e.target.value))}
+            value={verifyThree}
+            onChange={(e) => setVerifyThree(e.target.value)}
           />
           <PinInputField
             className="verify-input"
-            value={verifyOne}
-            onChange={(e) => setVerifyOne((verifyOne += e.target.value))}
+            value={verifyFour}
+            onChange={(e) => setVerifyFour(e.target.value)}
           />
           <PinInputField
             className="verify-input"
-            value={verifyOne}
-            onChange={(e) => setVerifyOne((verifyOne += e.target.value))}
+            value={verifyFive}
+            onChange={(e) => setVerifyFive(e.target.value)}
           />
           <PinInputField
             className="verify-input"
-            value={verifyOne}
-            onChange={(e) => setVerifyOne((verifyOne += e.target.value))}
+            value={verifySix}
+            onChange={(e) => setVerifySix(e.target.value)}
           />
         </PinInput>
-        <button className="verify-btn" type="submit">
+        <button className="verify-btn" onClick={handleVerify}>
           Verify
         </button>
       </HStack>
