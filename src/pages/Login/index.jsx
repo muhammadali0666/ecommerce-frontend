@@ -43,6 +43,7 @@ export default function SignIn() {
             location.href = "/register";
           }, 5000);
         } else if (datas.message === "Success") {
+          localStorage.setItem("token", datas.token)
           setTimeout(() => {
             location.href = "/";
           }, 5000);
