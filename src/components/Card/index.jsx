@@ -3,6 +3,10 @@ import { Container } from "../StyledComponents";
 import "./card.css";
 import { TbShoppingBagPlus } from "react-icons/tb";
 import { Box, CircularProgress } from "@mui/material";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const notify = (info) => toast.warn(info);
 
 export const Card = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -26,8 +30,15 @@ export const Card = () => {
     setPageCount(pageCount + 20);
   };
 
+  const handleShopping = () => {
+    if(!localStorage.getItem("token")){
+      notify("You must be login or register")
+    }
+  }
+
   return (
     <section className="card">
+      <ToastContainer/>
       <Container>
         <div className="card-inner">
           <ul className="card-list">
@@ -57,7 +68,7 @@ export const Card = () => {
                         </p>
                       </div>
 
-                      <button className="card-btn">
+                      <button className="card-btn" onClick={handleShopping}>
                         <TbShoppingBagPlus />
                       </button>
                     </div>
