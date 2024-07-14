@@ -62,6 +62,8 @@
   font-size: 24px;
   color: #00000095;
   cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .shopping-left-box-right {
   margin-left: auto;

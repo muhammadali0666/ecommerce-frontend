@@ -30,15 +30,29 @@ export const Card = () => {
     setPageCount(pageCount + 20);
   };
 
-  const handleShopping = () => {
-    if(!localStorage.getItem("token")){
-      notify("You must be login or register")
+  const handleShopping = (id) => {
+    if (!localStorage.getItem("token")) {
+      notify("You must be login or register");
+    } else {
+      fetch(`http://localhost:4001/shopping_cart/${id}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          token: localStorage.getItem("token"),
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => alert(data.message));
     }
-  }
+  };
+
+  const shoppingCart = (evt, id) => {
+    evt.preventDefault();
+  };
 
   return (
     <section className="card">
-      <ToastContainer/>
+      <ToastContainer />
       <Container>
         <div className="card-inner">
           <ul className="card-list">
@@ -68,7 +82,10 @@ export const Card = () => {
                         </p>
                       </div>
 
-                      <button className="card-btn" onClick={handleShopping}>
+                      <button
+                        className="card-btn"
+                        onClick={() => handleShopping(item?._id)}
+                      >
                         <TbShoppingBagPlus />
                       </button>
                     </div>
