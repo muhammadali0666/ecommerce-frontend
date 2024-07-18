@@ -34,15 +34,23 @@ export const Card = () => {
     if (!localStorage.getItem("token")) {
       notify("You must be login or register");
     } else {
-      fetch(`http://localhost:4001/shopping_cart/${id}`, {
+      fetch(`http://localhost:4001/add_cart`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           token: localStorage.getItem("token"),
         },
+        body: JSON.stringify({
+          productId: id,
+          quantity: 1,
+        }),
       })
         .then((res) => res.json())
-        .then((data) => alert(data.message));
+        .then((data) => {
+          if (data.message) {
+            notify(data.message);
+          }
+        });
     }
   };
 
