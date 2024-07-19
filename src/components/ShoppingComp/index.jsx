@@ -19,7 +19,7 @@ export const ShoppingComp = () => {
   };
 
   const getShoppingCart = () => {
-    fetch(`http://localhost:4001/get_shopping_cart`, {
+    fetch(`http://localhost:4001/carts_list`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -30,9 +30,38 @@ export const ShoppingComp = () => {
       .then((data) => setInfo(data.products));
   };
 
+  
+  const addQuantity = (id) => {
+    fetch(`http://localhost:4001/add_quantity`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        token: localStorage.getItem("token"),
+      },
+      body: JSON.stringify({
+        productId: id,
+      }),
+    })
+    getShoppingCart()
+  };
+
+  const reduceQuantity = (id) => {
+    fetch(`http://localhost:4001/reduce_quantity`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        token: localStorage.getItem("token"),
+      },
+      body: JSON.stringify({
+        productId: id,
+      }),
+    })
+    getShoppingCart()
+  };
+
   useEffect(() => {
     getShoppingCart();
-  }, []);
+  }, [addQuantity()]);
 
   return (
     <Container style={{ marginTop: "140px" }}>
@@ -59,12 +88,12 @@ export const ShoppingComp = () => {
                 </div>
                 <div className="shopping-left-box-middle">
                   <h4 className="shopping-left-box-middle-title">
-                    {item?.name}
+                    {item?.name ? item?.name.slice(0, 50) : item?.name}.
                   </h4>
                   <div className="shopping-left-box-middle-btn-box">
                     <button
                       className="shopping-left-box-middle-btn"
-                      onClick={quantity > 0 ? quantityDecreement : undefined}
+                      onClick={() => reduceQuantity(item?.productId)}
                     >
                       <FaMinus style={{ fontSize: "16px" }} />
                     </button>
@@ -73,7 +102,7 @@ export const ShoppingComp = () => {
                     </button>
                     <button
                       className="shopping-left-box-middle-btn"
-                      onClick={quantityIncreement}
+                      onClick={() => addQuantity(item?.productId)}
                     >
                       <FaPlus style={{ fontSize: "16px", color: "red" }} />
                     </button>
@@ -85,10 +114,10 @@ export const ShoppingComp = () => {
                     delete
                   </button>
                   <h4 className="shopping-left-box-right-paragraph">
-                    {item?.new_price} so'm
+                    {item?.new_price * item?.quantity} so'm
                   </h4>
                   <p className="shopping-left-box-right-p">
-                    {item?.old_price} so'm
+                    {item?.old_price * item?.quantity} so'm
                   </p>
                 </div>
               </div>

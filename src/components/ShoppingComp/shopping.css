@@ -35,7 +35,7 @@
 }
 .shopping-left-box-left-img {
   width: 70px;
-  height: 100px;
+  height: 70px;
   margin-left: 10px;
   border-radius: 4px;
 }
@@ -43,9 +43,9 @@
   margin-left: 40px;
 }
 .shopping-left-box-middle-title {
-  font-weight: normal;
+  font-weight: 500;
   font-size: 20px;
-  color: #00000095;
+  color: #00000097;
   margin-bottom: 20px;
 }
 .shopping-left-box-middle-btn-box {
@@ -99,6 +99,7 @@
   border-radius: 4px;
   width: 33%;
   padding: 20px;
+  height: max-content;
 }
 .shopping-right-title {
   color: #00000090;
