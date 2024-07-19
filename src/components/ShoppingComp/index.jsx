@@ -7,16 +7,8 @@ import { FaMinus } from "react-icons/fa";
 import "./shopping.css";
 
 export const ShoppingComp = () => {
-  const [quantity, setQuantity] = useState(0);
   const [info, setInfo] = useState([]);
-
-  const quantityIncreement = () => {
-    setQuantity((quant) => quant + 1);
-  };
-
-  const quantityDecreement = () => {
-    setQuantity((quant) => quant - 1);
-  };
+  const [handelMessage, setHandleMessage] = useState("");
 
   const getShoppingCart = () => {
     fetch(`http://localhost:4001/carts_list`, {
@@ -27,41 +19,61 @@ export const ShoppingComp = () => {
       },
     })
       .then((res) => res.json())
-      .then((data) => setInfo(data.products));
+      .then((data) => {
+        if (data.products) {
+          setInfo(data?.products);
+        }
+        if (data.message) {
+          setHandleMessage(data?.message);
+        }
+      });
   };
 
-  
-  const addQuantity = (id) => {
-    fetch(`http://localhost:4001/add_quantity`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        token: localStorage.getItem("token"),
-      },
-      body: JSON.stringify({
-        productId: id,
-      }),
-    })
-    getShoppingCart()
-  };
+    var addQuantity = (id) => {
+      fetch(`http://localhost:4001/add_quantity`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          token: localStorage.getItem("token"),
+        },
+        body: JSON.stringify({
+          productId: id,
+        }),
+      });
+      getShoppingCart();
+    };
 
-  const reduceQuantity = (id) => {
-    fetch(`http://localhost:4001/reduce_quantity`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        token: localStorage.getItem("token"),
-      },
-      body: JSON.stringify({
-        productId: id,
-      }),
-    })
-    getShoppingCart()
-  };
+    var reduceQuantity = (id) => {
+      fetch(`http://localhost:4001/reduce_quantity`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          token: localStorage.getItem("token"),
+        },
+        body: JSON.stringify({
+          productId: id,
+        }),
+      });
+      getShoppingCart();
+    };
+
+  // const deleteProduct = (id) => {
+  //   fetch(`http://localhost:4001/delete_cart`, {
+  //     method: "DELETE",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       token: localStorage.getItem("token"),
+  //     },
+  //     body: JSON.stringify({
+  //       productId: id,
+  //     }),
+  //   });
+  //   getShoppingCart();
+  // };
 
   useEffect(() => {
     getShoppingCart();
-  }, [addQuantity()]);
+  }, [addQuantity, reduceQuantity]);
 
   return (
     <Container style={{ marginTop: "140px" }}>
@@ -123,7 +135,7 @@ export const ShoppingComp = () => {
               </div>
             ))
           ) : (
-            <h1>loading...</h1>
+            <h1>{handelMessage || "Loading..."}</h1>
           )}
         </div>
         <div className="shopping-right">
