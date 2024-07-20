@@ -29,33 +29,33 @@ export const ShoppingComp = () => {
       });
   };
 
-    var addQuantity = (id) => {
-      fetch(`http://localhost:4001/add_quantity`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          token: localStorage.getItem("token"),
-        },
-        body: JSON.stringify({
-          productId: id,
-        }),
-      });
-      getShoppingCart();
-    };
+  var addQuantity = (id) => {
+    fetch(`http://localhost:4001/add_quantity`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        token: localStorage.getItem("token"),
+      },
+      body: JSON.stringify({
+        productId: id,
+      }),
+    });
+    getShoppingCart();
+  };
 
-    var reduceQuantity = (id) => {
-      fetch(`http://localhost:4001/reduce_quantity`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          token: localStorage.getItem("token"),
-        },
-        body: JSON.stringify({
-          productId: id,
-        }),
-      });
-      getShoppingCart();
-    };
+  var reduceQuantity = (id) => {
+    fetch(`http://localhost:4001/reduce_quantity`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        token: localStorage.getItem("token"),
+      },
+      body: JSON.stringify({
+        productId: id,
+      }),
+    });
+    getShoppingCart();
+  };
 
   // const deleteProduct = (id) => {
   //   fetch(`http://localhost:4001/delete_cart`, {
