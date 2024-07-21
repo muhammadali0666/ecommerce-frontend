@@ -15,6 +15,11 @@
   height: 15px;
   cursor: pointer;
 }
+
+.shopping-input:checked {
+  accent-color: #6571f1;
+}
+
 .shopping-label {
   margin-left: 10px;
   font-weight: 400;
@@ -32,6 +37,9 @@
   width: 15px;
   height: 15px;
   cursor: pointer;
+}
+.shopping-left-box-left-input:checked {
+  accent-color: #6571f1;
 }
 .shopping-left-box-left-img {
   width: 70px;

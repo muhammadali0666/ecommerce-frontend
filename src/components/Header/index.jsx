@@ -16,8 +16,8 @@ export const Header = () => {
                 src={Logo}
                 alt="logo"
                 className="header-logo"
-                width={200}
-                height={40}
+                width={160}
+                height={35}
               />
             </NavLink>
 
