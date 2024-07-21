@@ -1,10 +1,13 @@
 import React from "react";
 import { Layouts } from "../../components/Layouts";
+import { CategoryTitle, Container } from "../../components/StyledComponents";
 
 export const Kids = () => {
   return (
     <Layouts>
-      <h1>Kids</h1>
+      <Container>
+        <CategoryTitle>Kids</CategoryTitle>
+      </Container>
     </Layouts>
   );
 };
