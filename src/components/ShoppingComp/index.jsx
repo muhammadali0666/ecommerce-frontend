@@ -29,7 +29,7 @@ export const ShoppingComp = () => {
       });
   };
 
-  var addQuantity = (id) => {
+  const addQuantity = (id) => {
     fetch(`http://localhost:4001/add_quantity`, {
       method: "POST",
       headers: {
@@ -43,7 +43,7 @@ export const ShoppingComp = () => {
     getShoppingCart();
   };
 
-  var reduceQuantity = (id) => {
+  const reduceQuantity = (id) => {
     fetch(`http://localhost:4001/reduce_quantity`, {
       method: "POST",
       headers: {
@@ -57,23 +57,22 @@ export const ShoppingComp = () => {
     getShoppingCart();
   };
 
-  // const deleteProduct = (id) => {
-  //   fetch(`http://localhost:4001/delete_cart`, {
-  //     method: "DELETE",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       token: localStorage.getItem("token"),
-  //     },
-  //     body: JSON.stringify({
-  //       productId: id,
-  //     }),
-  //   });
-  //   getShoppingCart();
-  // };
+  const deleteProduct = (id) => {
+    fetch(`http://localhost:4001/delete_cart`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        token: localStorage.getItem("token"),
+      },
+      body: JSON.stringify({
+        productId: id,
+      }),
+    });
+  };
 
   useEffect(() => {
     getShoppingCart();
-  }, [addQuantity, reduceQuantity]);
+  }, [addQuantity, reduceQuantity, deleteProduct]);
 
   return (
     <Container style={{ marginTop: "140px" }}>
@@ -121,7 +120,7 @@ export const ShoppingComp = () => {
                   </div>
                 </div>
                 <div className="shopping-left-box-right">
-                  <button className="shopping-left-box-right-btn">
+                  <button className="shopping-left-box-right-btn" onClick={() => deleteProduct(item?.productId)}>
                     <MdDelete className="shopping-left-box-right-btn-img" />{" "}
                     delete
                   </button>
